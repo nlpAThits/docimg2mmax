@@ -4,13 +4,18 @@ from glob import glob
 import regex as re
 from ntpath import basename
 from operator import itemgetter
+from lib import *
 
 if __name__ == '__main__':  
     parser = argparse.ArgumentParser()
-    parser.add_argument('--pdf_folder',   default=None, required=True)
-    parser.add_argument('--out_path',     default=None, required=True)
-    parser.add_argument('--out_prefix',   default="",   required=False)
+    parser.add_argument('--pdf_folder',   default=None,  required=True)
+    parser.add_argument('--out_path',     default=None,  required=True)
+    parser.add_argument('--out_prefix',   default="",    required=False)
     parser.add_argument('--dpi',          default="300", required=False)
+    parser.add_argument('--decolor_grey_thresh',         default="50", required=False)
+    parser.add_argument('--decolor_black_thresh',        default="100", required=False)
+    
+    parser.add_argument('--decolor',      default=False, dest='decolor', action='store_true')
     # If set, input pdf files are processed in sort order, determined by the numerical value of the file name part up to the first position of this char. Non-numerical
     # chars in the sort string are removed.
     # If file name dioes not contain a particular separator, use . to use the full name w/o extension.
@@ -34,3 +39,7 @@ if __name__ == '__main__':
         for n in numps:
             print("Converting page", n)
             subprocess.check_output(["pdftocairo", "-r", ns.dpi, "-png", "-f", str(n) , "-l", str(n) , f, target_folder+os.path.sep+namebase])
+        if ns.decolor:
+            for i in glob(target_folder+os.path.sep+namebase+"*.png"):
+                print("Decoloring "+i, file=sys.stderr)
+                decolor_image(i, grey_thresh=int(ns.decolor_grey_thresh), black_thresh=int(ns.decolor_black_thresh))
