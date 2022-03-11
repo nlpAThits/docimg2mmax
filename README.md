@@ -1,1 +1,1 @@
-# documentimage2mmax
+# docimage2mmax
