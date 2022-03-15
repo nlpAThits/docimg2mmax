@@ -97,7 +97,7 @@ def ocrwords_to_lines(ocr_words_list):
     return frags, ( int(total_r/mk_words), int(total_g/mk_words), int(total_b/mk_words))
 
 
-def create_html_document(drawable_data_per_page, save_as, mmax2_disc, margin_width=1000, highlight_recognized_words=True, scale_by=1, mark_words=False, color_labels=False):
+def create_html_document(drawable_data_per_page, save_as, mmax2_disc, margin_width=1000, highlight_recognized_words=True, scale_by=1, mark_words=False, color_labels=True):
     with open(save_as,"w") as html_out:
         print('<!DOCTYPE html>\n<html>\n<head>\n<style>\n'\
             ' .reco      { fill: green; opacity: 0.2; }\n'\
