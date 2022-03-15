@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<annotationscheme>
+<attribute id='att_page_no' name='page_no' type='freetext'>
+	<value id='val_page_no' name='page_no'/>
+</attribute>
+</annotationscheme>

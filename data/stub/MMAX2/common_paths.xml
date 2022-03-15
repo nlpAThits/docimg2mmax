@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE common_paths>
+<common_paths>
+<basedata_path>basedata/</basedata_path>
+<customization_path>./common/customizations/</customization_path>
+<scheme_path>./common/schemes/</scheme_path>
+<style_path>./common/styles/</style_path>
+<markable_path>markables/</markable_path>
+<views>
+<stylesheet>style_1.xsl</stylesheet>
+</views>
+<annotations>
+<level 	name="text_words" 
+		namespace="www.mmax2.net/NameSpaces/text_words" 
+		at_startup="active"  
+		schemefile="text_words_scheme.xml" 
+		customization_file="text_words_customization.xml">$_text_words_level.xml</level>
+<level 	name="ocr_words" 
+		namespace="www.mmax2.net/NameSpaces/ocr_words" 
+		at_startup="active"  
+		schemefile="ocr_words_scheme.xml" 
+		customization_file="ocr_words_customization.xml">$_ocr_words_level.xml</level>
+<level 	name="ocr_lines" 
+		namespace="www.mmax2.net/NameSpaces/ocr_lines" 
+		at_startup="visible" 
+		schemefile="ocr_lines_scheme.xml" 
+		customization_file="ocr_lines_customization.xml">$_ocr_lines_level.xml</level>
+</annotations>
+</common_paths>
