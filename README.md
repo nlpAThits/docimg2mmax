@@ -1,5 +1,5 @@
 # docimg2mmax
-
+Under construction! Code and data are available and functional, though. Get in touch if you have any questions or comments!
 ## Installation
 ```bash
 $ git clone https://github.com/nlpAThits/docimg2mmax.git
