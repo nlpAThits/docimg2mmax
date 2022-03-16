@@ -12,5 +12,8 @@ $ unzip v0.65.zip
 $ pip install pyMMAX2-0.65/.
 ```
 ## Prepare PDF documents
+```
+$ python pdf2png.py --pdf_file_path ./data/in/pdf/PMC6742607_w_markup_300dpi.pdf --out_path ./data/in/png/ --num_sort_split_char . --decolor
+```
 
 ## Extract text and markup
