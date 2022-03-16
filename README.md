@@ -1,7 +1,7 @@
 # docimg2mmax
 
 ## Installation
-```
+```bash
 $ git clone https://github.com/nlpAThits/docimg2mmax.git
 $ cd docimg2mmax
 $ conda create --name docimg2mmax python=3.8 --file reqs.txt
