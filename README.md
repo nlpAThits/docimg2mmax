@@ -11,7 +11,7 @@ $ wget https://github.com/nlpAThits/pyMMAX2/archive/refs/tags/v0.65.zip
 $ unzip v0.65.zip
 $ pip install pyMMAX2-0.65/.
 ```
-In addition, the console tool ```pdftocairo``` is required. 
+The console tool ```pdftocairo``` is required if you want to use ```pdf2png.py``` for document preparation. Also, ```tesseract``` is required for the actual recognition.
 
 ## Prepare PDF documents
 PDF documents have to be converted to collections of PNG files, one per page, before extraction. pdf2png is a simple utility which generates files with the correct naming conventions.
@@ -20,6 +20,7 @@ $ python pdf2png.py --pdf_file_path ./data/in/pdf/PMC6742607_w_markup_300dpi.pdf
 ```
 
 ## Extract text and markup
+Note that ```--tessdata_dir``` needs to be set to your local tesseract model installation folder. Improved models can be downloaded from here. 
 ```
-$ python docimg2mmax.py --img_folders ./data/in/png/PMC6742607_w_markup_300dpi@300dpi/ --mmax2_target_folder ./data/out/   --tessdata_dir /usr/share/tesseract-ocr/4.00/tessdata_best/ --oem 1 --psm 3 --dpi 300  --workers 1  --verbose --detect_markup --html_target_folder ./data/out/html/ --min_markup_percentage 15
+$ python docimg2mmax.py --img_folders ./data/in/png/PMC6742607_w_markup_300dpi@300dpi/ --mmax2_target_folder ./data/out/   --tessdata_dir /usr/share/tesseract-ocr/4.00/tessdata/ --oem 1 --psm 3 --dpi 300  --workers 1  --verbose --detect_markup --html_target_folder ./data/out/html/ --min_markup_percentage 15
 ```
