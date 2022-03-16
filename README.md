@@ -13,7 +13,7 @@ $ pip install pyMMAX2-0.65/.
 ```
 ## Prepare PDF documents
 PDF documents have to be converted to collections of PNG files, one per page, before extraction. pdf2png is a simple utility which generates files with the correct naming conventions.
-```
+```bash
 $ python pdf2png.py --pdf_file_path ./data/in/pdf/PMC6742607_w_markup_300dpi.pdf --out_path ./data/in/png/ --num_sort_split_char . --decolor
 ```
 
