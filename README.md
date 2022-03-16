@@ -11,6 +11,8 @@ $ wget https://github.com/nlpAThits/pyMMAX2/archive/refs/tags/v0.65.zip
 $ unzip v0.65.zip
 $ pip install pyMMAX2-0.65/.
 ```
+In addition, the console tool ```pdftocairo``` is required. 
+
 ## Prepare PDF documents
 PDF documents have to be converted to collections of PNG files, one per page, before extraction. pdf2png is a simple utility which generates files with the correct naming conventions.
 ```
