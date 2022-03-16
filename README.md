@@ -1,4 +1,6 @@
 # docimg2mmax
+
+## Installation
 ```
 $ git clone https://github.com/nlpAThits/docimg2mmax.git
 $ cd docimg2mmax
