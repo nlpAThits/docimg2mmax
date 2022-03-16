@@ -20,7 +20,7 @@ $ python pdf2png.py --pdf_file_path ./data/in/pdf/PMC6742607_w_markup_300dpi.pdf
 ```
 
 ## Extract text and markup
-Note that ```--tessdata_dir``` needs to be set to your local tesseract model installation folder. Improved models can be downloaded from here. 
+Note that ```--tessdata_dir``` needs to be set to your local tesseract model installation folder. Improved models can be downloaded from <a href="https://github.com/tesseract-ocr/tessdata_best" target='new'>here</a>. 
 ```
 $ python docimg2mmax.py --img_folders ./data/in/png/PMC6742607_w_markup_300dpi@300dpi/ --mmax2_target_folder ./data/out/   --tessdata_dir /usr/share/tesseract-ocr/4.00/tessdata/ --oem 1 --psm 3 --dpi 300  --workers 1  --verbose --detect_markup --html_target_folder ./data/out/html/ --min_markup_percentage 15
 ```
