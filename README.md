@@ -11,3 +11,6 @@ $ wget https://github.com/nlpAThits/pyMMAX2/archive/refs/tags/v0.65.zip
 $ unzip v0.65.zip
 $ pip install pyMMAX2-0.65/.
 ```
+## Prepare PDF documents
+
+## Extract text and markup
